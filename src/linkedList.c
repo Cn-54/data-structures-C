@@ -155,6 +155,11 @@ void clear(ll *l){
     l->size = 0;
 }
 
+void destroyList(ll *l){
+    clear(l);
+    free(l);
+}
+
 void printList(ll *l){
     node *curr = l->head;
 

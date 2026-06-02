@@ -7,6 +7,7 @@ typedef struct list ll;
 
 ll *createLinkedList(void);
 void clear(ll *l);
+void destroyList(ll *l);
 
 void append(ll *l, int value);
 void prepend(ll *l, int value);
