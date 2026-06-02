@@ -49,6 +49,7 @@ void prepend(ll *l, int value){
     }
 
     l->head = new;
+    l->size++;
 }
 
 void deleteHead(ll *l){
