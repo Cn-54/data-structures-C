@@ -16,11 +16,10 @@ build/%.o: src/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf build $(TARGET)
+	rm -rf build $(TARGET) libds.a
 
 LIB_SRC = src/linkedList.c src/stack.c src/queue.c src/minHeap.c src/hashMap.c src/binaryTree.c
-
-LIB_OBJ = $(LIB_SRC:.c=.o)
+LIB_OBJ = $(LIB_SRC:src/%.c=build/%.o)
 
 lib: $(LIB_OBJ)
-    ar rcs libds.a $(LIB_OBJ)
+	ar rcs libds.a $(LIB_OBJ)

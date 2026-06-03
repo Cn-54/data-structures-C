@@ -20,10 +20,10 @@ que *createEmptyQueue(int size){
     return q;
 }
 
-int isempty(que *q){
+static int isempty(que *q){
     return q->front == -1;
 }
-int isfull(que *q){
+static int isfull(que *q){
     return q->back == q->size-1;
 }
 

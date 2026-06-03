@@ -21,14 +21,14 @@ st *createEmptyStack(int maxSize)
     return s;
 }
 
-int isempty(st *s){
+static int isempty(st *s){
     if(s->top == -1)
         return 1;
     else
         return 0;
 }
 
-int isfull(st *s){
+static int isfull(st *s){
     if(s->top == s->size-1)
         return 1;
     else
