@@ -17,3 +17,10 @@ build/%.o: src/%.c
 
 clean:
 	rm -rf build $(TARGET)
+
+LIB_SRC = src/linkedList.c src/stack.c src/queue.c src/minHeap.c src/hashMap.c src/binaryTree.c
+
+LIB_OBJ = $(LIB_SRC:.c=.o)
+
+lib: $(LIB_OBJ)
+    ar rcs libds.a $(LIB_OBJ)
