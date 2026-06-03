@@ -18,7 +18,7 @@ build/%.o: src/%.c
 clean:
 	rm -rf build $(TARGET) libds.a
 
-LIB_SRC = src/linkedList.c src/stack.c src/queue.c src/minHeap.c src/hashMap.c src/binaryTree.c
+LIB_SRC = src/linkedList.c src/stack.c src/queue.c src/hashMap.c src/binaryTree.c
 LIB_OBJ = $(LIB_SRC:src/%.c=build/%.o)
 
 lib: $(LIB_OBJ)
